@@ -3,7 +3,6 @@
 // Identify the topper (student with the highest percentage) and the failer (student with the lowest percentage).
 // Create a new array with students ranked according to their percentages.
 
-const { use } = require("react");
 
 
 // const students = [
@@ -116,15 +115,176 @@ const { use } = require("react");
 // }
 // console.log(utkarshChild);
 
-const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const array2 = [2, 3, 4, 5, 6, 7, 8, 9, 10, 1];
-const array3 = [5, 6, 7, 8, 9, 10, 1, 2, 3, 4];
+// const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const array2 = [2, 3, 4, 5, 6, 7, 8, 9, 10, 1];
+// const array3 = [5, 6, 7, 8, 9, 10, 1, 2, 3, 4];
 
 
-const combineArr=[...array1,...array2,...array3]
-console.log(combineArr);
-
+// const combineArr=[...array1,...array2,...array3]
+// console.log(combineArr,"Combined Array");
 
 // for(let i=0;i<combineArr.length;i++){
-
+// for(let j=i+1;j<combineArr.length;j++){
+//     if(combineArr[j]<combineArr[i])
+//         {
+//             temp = combineArr[j]
+//             combineArr[j]=combineArr[i]
+//             combineArr[i] = temp
+//         }
 // }
+// }
+// console.log(combineArr,"Sorted Combined Array")
+
+// let removeDuplicate=combineArr.filter((item,
+// index) => combineArr.indexOf(item) === index);
+
+// console.log(removeDuplicate,"Removed Duplicate Array");
+
+
+
+
+// You are given a list of employees, each with a unique ID, name, department, and an array of project objects. 
+// Each project object contains the project name, deadline (in YYYY-MM-DD format), and status (either "completed" or "pending").
+// Your task is to:
+
+// Count the total number of projects each department is working on.
+// Identify the employee with the most completed projects in each department.
+// List all projects that have missed their deadlines (considering today's date).
+// Generate a summary for each department, containing:
+// The total number of projects.
+// The name of the employee with the most completed projects.
+// A list of all missed deadline projects.
+
+
+
+const employees = [
+    {
+      id: 1,
+      name: "Alice",
+      department: "Engineering",
+      projects: [
+        { name: "Project A", deadline: "2024-07-01", status: "completed" },
+        { name: "Project B", deadline: "2024-07-25", status: "pending" },
+        { name: "Project C", deadline: "2024-06-30", status: "completed" },
+      ],
+    },
+    {
+      id: 2,
+      name: "Bob",
+      department: "Engineering",
+      projects: [
+        { name: "Project D", deadline: "2024-07-15", status: "completed" },
+        { name: "Project E", deadline: "2024-07-20", status: "pending" },
+      ],
+    },
+    {
+      id: 3,
+      name: "Charlie",
+      department: "Sales",
+      projects: [
+        { name: "Project F", deadline: "2024-06-15", status: "completed" },
+        { name: "Project G", deadline: "2024-06-20", status: "completed" },
+      ],
+    },
+    {
+      id: 4,
+      name: "David",
+      department: "Sales",
+      projects: [
+        { name: "Project H", deadline: "2024-07-10", status: "pending" },
+       { name: "Project I", deadline: "2024-07-05", status: "completed" },
+      ],
+    },
+    {
+      id: 5,
+      name: "Eve",
+      department: "Marketing",
+      projects: [
+        { name: "Project J", deadline: "2024-06-15", status: "pending" },
+        { name: "Project K", deadline: "2024-07-25", status: "completed" },
+      ],
+    },
+  ];
+  
+
+// const arr=employees[index];
+// console.log(arr);
+
+
+// const arr1=employees[index].projects;
+// console.log(
+//     arr1,"projects"
+// )
+
+
+// employees[index].projects[0].name="Utkarsh project" 
+// console.log(
+//     arr1,"projects"
+// )
+
+
+// let findEmp=employees.find((val)=>val.name == "Eve")
+// let findStatus=findEmp.projects.find((val)=>val.status=="pending")
+// console.log(findEmp,"without update",findStatus,);
+// findStatus.status="completed"
+// console.log(findEmp,"with update",findStatus,);
+
+
+let project_name ="Project k";
+
+// Remove "Project K" from the employees array
+const updatedEmployees = employees.map(employee => ({
+    ...employee, 
+    projects: employee.projects.filter(project => project.name !== project_name)
+}));
+
+console.log(updatedEmployees);
+
+
+// const employees1 = [
+//     {
+//       id: 1,
+//       name: "Alice",
+//       department: "Engineering",
+//       deadline: "2024-06-15",
+//       status: "pending" 
+//     },
+//     {
+//         id: 2,
+//         name: "Aliceee",
+//         department: "Engineering",
+//         deadline: "2024-06-15",
+//         status: "completed" 
+//       },
+//       {
+//         id: 3,
+//         name: "Aliceeee",
+//         department: "Engineering",
+//         deadline: "2024-06-15",
+//         status: "completed" 
+//       },
+//       {
+//         id: 4,
+//         name: "Ace",
+//         department: "Engineering",
+//         deadline: "2024-06-15",
+//         status: "pending" 
+//       }
+// ]
+
+// let addArr=employees1.map((value)=>{
+             
+//     console.log( {
+//         id: value.id,
+//         name: value.name,
+//         department: value.department,
+//         project:[{
+//             deadline: value.deadline,     
+//             status:  value.status 
+//         }]
+//     })
+// })
+// // console.log(addArr, "this is last")
+
+
+
