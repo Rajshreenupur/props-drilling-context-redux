@@ -230,15 +230,15 @@ const employees = [
 // console.log(findEmp,"with update",findStatus,);
 
 
-let project_name ="Project k";
+// let project_name ="Project k";
 
-// Remove "Project K" from the employees array
-const updatedEmployees = employees.map(employee => ({
-    ...employee, 
-    projects: employee.projects.filter(project => project.name !== project_name)
-}));
+// // Remove "Project K" from the employees array
+// const updatedEmployees = employees.map(employee => ({
+//     ...employee, 
+//     projects: employee.projects.filter(project => project.name !== project_name)
+// }));
 
-console.log(updatedEmployees);
+// console.log(updatedEmployees);
 
 
 // const employees1 = [
@@ -287,4 +287,56 @@ console.log(updatedEmployees);
 // // console.log(addArr, "this is last")
 
 
+// const numbers = [45, 4, 9, 16, 25];
 
+// const filterArr=[];
+// const value=16
+// const over16=filterFunction(value,numbers)
+
+// function filterFunction(value,numbers) {
+//     for(let i=0;i<numbers.length;i++){
+//         if(numbers[i]>=value){
+//             filterArr.push(numbers[i]);
+//         }
+//   }
+
+// return filterArr;
+// }
+// console.log(over16);
+
+
+
+
+const ArrObj=[{
+    name:"Rajshree Nupur",
+    age:22,
+    DOB:16/9/2001
+},
+{
+    name:"Neha",
+    age:20,
+    DOB:20/10/2001
+},
+{
+    name:"Sakshi",
+    age:25,
+    marks:34,
+    DOB:18/8/2001
+}]
+
+
+
+const filterObj=[];
+ const findObj=filterObjFunc(22,'age','lower');
+
+function filterObjFunc(value,key,condition){
+    for (let index = 0; index < ArrObj.length; index++) {
+        const element = ArrObj[index];
+        if((condition=='equal' && element[key]==value)|| (condition=='greater' && element[key]>value)|| (condition=='lower' && element[key]<value)){
+                filterObj.push(element);
+         }
+
+    }
+    return filterObj;
+}
+console.log(findObj)
